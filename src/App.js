@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-export default class App extends Component {
+class App extends React.Component {
 	state = {
 		name: "Gilbert"
 	};
@@ -17,7 +17,7 @@ export default class App extends Component {
 
 	// Render is a lifecycle method
 	// Only required lifecycle method as it is needed to render component to browser
-	// This render component returns JSX. Looks like HTML, but it isn't. Looks a lot like Vue.
+	// This render component returns JSX. Looks like HTML, but it isn't. Looks a bit like Vue (as for as binding an displaying js variables).
 	render() {
 		return (
 			<div className="App">
@@ -37,3 +37,5 @@ export default class App extends Component {
 		);
 	}
 }
+
+export default App;
