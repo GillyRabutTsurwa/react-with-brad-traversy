@@ -1,13 +1,13 @@
 import React from "react";
+import CurrentTodo from "./CurrentTodo";
 
 class Todos extends React.Component {
 	render() {
-		// NEW: Unlike Vue, we don't declare a props property with the name of our prop in the child component. Under the hood, the props are just there and we have access to them. Très sous-entendu, pas comme Vue.
-		// we can also put this.props.todosProp in its own variable if needed
-		// we can also put all this logic in its own variable and just render the variable. We can do many tings
 		console.log(this.props.todosProp);
 		return this.props.todosProp.map((currentTodo) => {
-			return <span key={currentTodo.id}>{currentTodo.title}</span>;
+			// NEW: My favourite thing to do with JS frameworks. Vue, React, Svelte, all of them: rendering components through a loop
+			// key property is like v-bind:key in Vue
+			return <CurrentTodo key={currentTodo.id} titleProp={currentTodo.title} />;
 		});
 	}
 }
