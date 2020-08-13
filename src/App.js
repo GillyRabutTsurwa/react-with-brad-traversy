@@ -26,13 +26,11 @@ export default class App extends Component {
 	};
 
 	render() {
-		//NOTE: I get it. the return section is for JSX only.
-		// stuff inside the render and outside the return is where you can do console.log(), declare variables for your state, etc etc etc.
-		console.log(this.state.todos);
 		return (
 			<div className="App">
 				<img src={logo} className="App-logo" alt="logo" />
-				<Todos />
+				{/* NEW: Props. Just like Vue */}
+				<Todos todosProp={this.state.todos} />
 				<h2>Play around with state if needed</h2>
 			</div>
 		);
