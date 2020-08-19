@@ -5,9 +5,8 @@ import PropTypes from "prop-types";
 class Todos extends React.Component {
 	render() {
 		return this.props.todosProp.map((currentTodo) => {
-			// NEW: My favourite thing to do with JS frameworks. Vue, React, Svelte, all of them: rendering components through a loop
-			// key property is like v-bind:key in Vue
-			return <CurrentTodo key={currentTodo.id} titleProp={currentTodo.title} />;
+			// NEW: Instead of passing a string as a prop, I'm passing in the whole object
+			return <CurrentTodo key={currentTodo.id} todoProp={currentTodo} />;
 		});
 	}
 }

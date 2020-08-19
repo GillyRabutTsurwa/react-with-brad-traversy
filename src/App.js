@@ -15,7 +15,7 @@ export default class App extends Component {
 			{
 				id: 2,
 				title: "Buy groceries",
-				completed: false
+				completed: true
 			},
 			{
 				id: 3,
