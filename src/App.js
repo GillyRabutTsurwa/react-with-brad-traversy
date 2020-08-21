@@ -31,7 +31,6 @@ export default class App extends Component {
 				<img src={logo} className="App-logo" alt="logo" />
 				{/* NEW: Props. Just like Vue */}
 				<Todos todosProp={this.state.todos} />
-				<h2>Play around with state if needed</h2>
 			</div>
 		);
 	}
