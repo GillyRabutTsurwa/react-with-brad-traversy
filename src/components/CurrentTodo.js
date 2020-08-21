@@ -2,31 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 
 class CurrentTodo extends React.Component {
-	//NEW: Styling. many ways, voici une très bonne.
-	getStyle() {
-		console.log(this.props);
-		if (this.props.todoProp.completed) {
-			return {
-				textDecoration: "line-through"
-			};
-		}
-		else {
-			return {
-				textDecoration: "none"
-			};
-		}
-	}
-
-	componentDidMount() {
-		this.getStyle();
-	}
-
 	render() {
-		return <h4 style={this.getStyle()}>{this.props.todoProp.title}</h4>;
+		//NEW: Une méthode pour intégrer les styles. Créer un objet juste ici.
+		// On peut probablement faire le styling conditionel ici, mais je préfère ne pas le faire
+		let myStyles = {
+			color: "forestgreen",
+			textTransform: "uppercase"
+		};
+
+		return <h4 style={myStyles}>{this.props.todoProp.title}</h4>;
 	}
 }
-
-// Look at Todos.js for useful comments on prop-types and how to use them
 
 CurrentTodo.propTypes = {
 	todoProp: PropTypes.object.isRequired
