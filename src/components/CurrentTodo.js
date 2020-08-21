@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 class CurrentTodo extends React.Component {
-	//NEW: Styling. many ways, voici une très bonne.
+	//NEW: Voici ma meilleure méthode. Utiliser une méthod que l'on va appeler dans parmi notre code JSX
 	getStyle() {
 		console.log(this.props);
 		if (this.props.todoProp.completed) {
@@ -15,10 +15,6 @@ class CurrentTodo extends React.Component {
 				textDecoration: "none"
 			};
 		}
-	}
-
-	componentDidMount() {
-		this.getStyle();
 	}
 
 	render() {
