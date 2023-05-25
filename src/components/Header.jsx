@@ -1,3 +1,4 @@
+import Button from "./Button";
 function Header(props) {
     const subHeaderStyles = {
         color: "gold",
@@ -5,12 +6,13 @@ function Header(props) {
     };
 
     return (
-        <>
-            <header>
-                <h1 style={{ color: "cornflowerblue" }}>{props.title}</h1>
-                <h2 style={subHeaderStyles}>SubHeading Tings</h2>
-            </header>
-        </>
+        <header className="header">
+            <h1>{props.title}</h1>
+            <Button text="Hello" colour="green" />
+            <Button text="Hola" colour="lightcoral" />
+            <Button text="Salut" colour="cornflowerblue" />
+            <Button text="Yo" />
+        </header>
     );
 }
 
