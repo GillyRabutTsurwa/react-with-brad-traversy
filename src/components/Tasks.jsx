@@ -1,9 +1,10 @@
+import Task from "./Task";
 function Tasks(props) {
     const { tasks } = props;
     return (
         <>
             {tasks.map((currentTask) => {
-                return <h3 key={currentTask.id}>{currentTask.text}</h3>;
+                return <Task key={currentTask.id} task={currentTask} />;
             })}
         </>
     );
