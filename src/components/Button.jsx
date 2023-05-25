@@ -1,16 +1,9 @@
 import { PropTypes } from "prop-types";
 
-const cliquer = (e) => {
-    const { target } = e;
-    console.log("cliqué");
-    console.log(e);
-    console.log(target);
-};
-
 function Button(props) {
-    const { text = "Add", colour = "crimson" } = props;
+    const { text = "Add", colour = "crimson", btnPress } = props;
     return (
-        <button onClick={cliquer} style={{ backgroundColor: colour }} className="btn">
+        <button onClick={btnPress} style={{ backgroundColor: colour }} className="btn">
             {text}
         </button>
     );
@@ -19,6 +12,7 @@ function Button(props) {
 Button.propTypes = {
     text: PropTypes.string,
     colour: PropTypes.string,
+    btnPress: PropTypes.func.isRequired,
 };
 
 export default Button;
