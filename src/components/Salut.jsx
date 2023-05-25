@@ -1,4 +1,4 @@
-import React from "react";
+import { PropTypes } from "prop-types";
 
 function Salut() {
     return (
@@ -8,5 +8,9 @@ function Salut() {
         </>
     );
 }
+
+Salut.propTypes = {
+    message: PropTypes.string, //NOTE: si message n'est pas une chaîne, une erreur se fera
+};
 
 export default Salut;
