@@ -1,15 +1,33 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-// import "./App.css";
-import "./components/Header";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
+import { useState } from "react";
+const myTasks = [
+    {
+        id: 1,
+        text: "Doc's Appointment",
+        day: "who cares",
+        reminder: true,
+    },
+    {
+        id: 2,
+        text: "Weekend Tings",
+        day: "who cares",
+        reminder: true,
+    },
+    {
+        id: 3,
+        text: "Take the bin out",
+        day: "who cares",
+        reminder: true,
+    },
+];
 
 function App() {
+    const [tasks, setTasks] = useState(myTasks);
     return (
         <>
             <Header title="Task Tracker" />
-            <Tasks />
+            <Tasks tasks={tasks} />
         </>
     );
 }
