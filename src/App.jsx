@@ -3,13 +3,13 @@ import viteLogo from "/vite.svg";
 // import "./App.css";
 import "./components/Header";
 import Header from "./components/Header";
-import Greeting from "./components/Greeting";
-import Salut from "./components/Salut";
+import Tasks from "./components/Tasks";
 
 function App() {
     return (
         <>
             <Header title="Task Tracker" />
+            <Tasks />
         </>
     );
 }
